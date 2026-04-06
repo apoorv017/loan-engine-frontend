@@ -3,7 +3,8 @@ import type { FormEvent } from 'react';
 
 const employmentOptions = ['salaried', 'self-employed', 'contractor', 'unemployed'];
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const defaultApiUrl = 'https://loan-engine-backend.onrender.com';
+const API_URL = import.meta.env.VITE_API_URL || (typeof window !== 'undefined' && window.location.hostname === 'localhost' ? 'http://localhost:5000' : defaultApiUrl);
 
 function App() {
   const [name, setName] = useState('');
