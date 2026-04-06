@@ -342,8 +342,22 @@ select {
   border-radius: 14px;
   border: 1px solid #e7e6ef;
   background: #faf9ff;
+  color: #1f1e2e;
   font: inherit;
+  font-size: 0.95rem;
   outline: none;
+}
+
+input::placeholder,
+select::placeholder {
+  color: #a09fb5;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 30px #faf9ff inset !important;
+  -webkit-text-fill-color: #1f1e2e !important;
 }
 
 input:focus,
