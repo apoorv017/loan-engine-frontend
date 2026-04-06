@@ -1,0 +1,49 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "Loan Engine",
+  "dateExport": "2026-04-06T00:00:00.000Z",
+  "version": "1.1",
+  "folders": [
+    {
+      "name": "Loan Evaluation",
+      "requests": ["req_1"]
+    }
+  ],
+  "requests": [
+    {
+      "id": "req_1",
+      "name": "Evaluate Loan",
+      "method": "POST",
+      "url": "http://localhost:5000/evaluate",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "raw": "{\n  \"name\": \"John Doe\",\n  \"income\": 75000,\n  \"creditScore\": 720,\n  \"loanAmount\": 20000,\n  \"employmentType\": \"salaried\"\n}"
+      },
+      "tests": []
+    },
+    {
+      "id": "req_2",
+      "name": "Evaluate Loan - Rejection Case",
+      "method": "POST",
+      "url": "http://localhost:5000/evaluate",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "raw": "{\n  \"name\": \"Jane Smith\",\n  \"income\": 50000,\n  \"creditScore\": 550,\n  \"loanAmount\": 40000,\n  \"employmentType\": \"self-employed\"\n}"
+      },
+      "tests": []
+    },
+    {
+      "id": "req_3",
+      "name": "Get API Status",
+      "method": "GET",
+      "url": "http://localhost:5000/",
+      "headers": {},
+      "body": {},
+      "tests": []
+    }
+  ]
+}
